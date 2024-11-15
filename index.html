@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafix - Leaderboard & Rewards Dashboards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        .leaderboard, .rewards-dashboard, .challenges {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .leaderboard-header, .rewards-header, .challenges-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 2px solid #fff;
+        }
+        .leaderboard-item, .rewards-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+        .leaderboard-item:hover, .rewards-item:hover {
+            background-color: #555;
+        }
+        .points {
+            color: #f39c12;
+        }
+        .challenge {
+            font-size: 16px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .btn {
+            background-color: #3498db;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .social-share {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .social-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trafix - Leaderboard & Rewards Dashboards</h1>
+
+        <!-- Leaderboard Section -->
+        <div class="leaderboard">
+            <div class="leaderboard-header">
+                <div>Rank</div>
+                <div>Username</div>
+                <div>Points</div>
+            </div>
+            <div class="leaderboard-item">
+                <div>1</div>
+                <div>John Doe</div>
+                <div class="points">100</div>
+            </div>
+            <div class="leaderboard-item">
+                <div>2</div>
+                <div>Jane Smith</div>
+                <div class="points">80</div>
+            </div>
+            <div class="leaderboard-item">
+                <div>3</div>
+                <div>Alex Johnson</div>
+                <div class="points">60</div>
+            </div>
+        </div>
+
+        <!-- 5 km a Week Challenge Section -->
+        <div class="challenges">
+            <div class="challenges-header">
+                <div>Challenge</div>
+                <div>Progress</div>
+                <div>Action</div>
+            </div>
+            <div class="leaderboard-item">
+                <div>5 km a Week Challenge</div>
+                <div class="challenge">You have traveled 3 km this week!</div>
+                <div><button class="btn">Join Challenge</button></div>
+            </div>
+        </div>
+
+        <!-- Rewards Dashboard Section -->
+        <div class="rewards-dashboard">
+            <div class="rewards-header">
+                <div>Ways to Earn Points</div>
+                <div>Points</div>
+            </div>
+            <div class="rewards-item">
+                <div>Travel 1 km</div>
+                <div class="points">10</div>
+            </div>
+            <div class="rewards-item">
+                <div>Redeem Gift Card</div>
+                <div class="points">20</div>
+            </div>
+            <div class="rewards-item">
+                <div>Daily Login</div>
+                <div class="points">10</div>
+            </div>
+            <div class="rewards-item">
+                <div>Welcome Bonus (Once)</div>
+                <div class="points">50</div>
+            </div>
+        </div>
+
+        <!-- Social Sharing Section -->
+        <div class="social-share">
+            <p>Share your achievements:</p>
+            <button class="social-btn" onclick="shareAchievement('Facebook')">Share on Facebook</button>
+            <button class="social-btn" onclick="shareAchievement('Twitter')">Share on Twitter</button>
+        </div>
+
+        <!-- Certificate Generation Section -->
+        <div class="certificate-section">
+            <button class="btn" onclick="generateCertificate()">Download Certificate</button>
+        </div>
+    </div>
+
+    <script>
+        function shareAchievement(platform) {
+            alert("Sharing on " + platform);
+            // Here you can integrate with social media sharing APIs like Facebook SDK or Twitter API
+            // This is a placeholder to simulate social media sharing.
+        }
+
+        function generateCertificate() {
+            // Simulating certificate generation. You can integrate with a dynamic system
+            // to generate certificates based on user's achievements
+            alert("Certificate Generated! Downloading...");
+            // You can later integrate a feature where the certificate is generated and downloaded
+        }
+    </script>
+</body>
+</html>
